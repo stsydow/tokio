@@ -20,4 +20,5 @@ members = [
   "tokio-tls",
   "tokio-udp",
   "tokio-uds",
+  "benches",
 ]
