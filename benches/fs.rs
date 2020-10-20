@@ -41,7 +41,7 @@ fn async_read_codec(b: &mut Bencher) {
     });
 }
 
-fn async_read(b: &mut Bencher) {
+fn async_read_buf(b: &mut Bencher) {
     let mut rt = rt();
 
     b.iter(|| {
@@ -96,7 +96,7 @@ fn sync_read(b: &mut Bencher) {
 benchmark_group!(
     file,
     async_read_std_file,
-    async_read,
+    async_read_buf,
     async_read_codec,
     sync_read
 );
