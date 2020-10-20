@@ -6,6 +6,7 @@ edition = "2018"
 
 [dependencies]
 tokio = { version = "0.2.0", path = "../tokio", features = ["full"] }
+tokio-util = { version = "0.3.1", path = "../tokio-util", features = ["full"] }
 bencher = "0.1.5"
 
 [[bench]]
@@ -32,4 +33,8 @@ harness = false
 [[bench]]
 name = "sync_semaphore"
 path = "sync_semaphore.rs"
+harness = false
+[[bench]]
+name = "fs"
+path = "fs.rs"
 harness = false
